@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "resources": "file:src/resources",
     "@material-ui/core": "^4.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "resources": "file:src/resources"
   },
   "scripts": {
     "start": "react-scripts start",
