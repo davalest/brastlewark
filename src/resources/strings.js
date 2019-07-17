@@ -3,10 +3,22 @@ import { getPathArray, createCookie, getCookie } from "./utils";
 const strings = {
     es: {
         "search": "Buscar",
+        "age":"Edad",
+        "weight":"Peso",
+        "height":"Estatura",
+        "hair_color":"Color de pelo",
+        "professions":"Profesiones",
+        "friends":"Amigos",
 
     },
     en: {
         "search": "Search",
+        "age":"Age",
+        "weight":"Weight",
+        "height":"Height",
+        "hair_color":"Hair color",
+        "professions":"Professions",
+        "friends":"Friends",
     }
 };
 
