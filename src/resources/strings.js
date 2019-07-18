@@ -3,22 +3,26 @@ import { getPathArray, createCookie, getCookie } from "./utils";
 const strings = {
     es: {
         "search": "Buscar",
-        "age":"Edad",
-        "weight":"Peso",
-        "height":"Estatura",
-        "hair_color":"Color de pelo",
-        "professions":"Profesiones",
-        "friends":"Amigos",
+        "name": "Nombre",
+        "age": "Edad",
+        "weight": "Peso",
+        "height": "Estatura",
+        "hair_color": "Color de pelo",
+        "professions": "Profesiones",
+        "friends": "Amigos",
+        "select_name": "Selecciona el nombre del ciudadano que buscas",
 
     },
     en: {
         "search": "Search",
-        "age":"Age",
-        "weight":"Weight",
-        "height":"Height",
-        "hair_color":"Hair color",
-        "professions":"Professions",
-        "friends":"Friends",
+        "name": "Name",
+        "age": "Age",
+        "weight": "Weight",
+        "height": "Height",
+        "hair_color": "Hair color",
+        "professions": "Professions",
+        "friends": "Friends",
+        "select_name": "Select the name of the citizen you are looking for",
     }
 };
 

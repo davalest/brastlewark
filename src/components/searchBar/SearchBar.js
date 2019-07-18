@@ -9,12 +9,45 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Divider from "@material-ui/core/Divider";
 import Avatar from "@material-ui/core/Avatar";
 
+const useStyles = makeStyles(theme => ( {
+    root: {
+        flex: 1
+    },
+    container: {
+        flexGrow: 1,
+        position: "relative"
+    },
+    paper: {
+        position: "absolute",
+        zIndex: 1,
+        marginTop: theme.spacing(1),
+        left: 0,
+        right: 0
+    },
+    chip: {
+        margin: theme.spacing(0.5, 0.25)
+    },
+    inputRoot: {
+        flexWrap: "wrap"
+    },
+    inputInput: {
+        width: "auto",
+        flexGrow: 1,
+        backgroundColor: "#f5f5f5",
+        textAlign: "center"
+    },
+    divider: {
+        height: theme.spacing(2)
+    }
+} ));
+
 
 function renderInput(inputProps) {
     const { InputProps, classes, ref, ...other } = inputProps;
 
     return (
         <TextField
+            style={{ padding: 15 }}
             InputProps={{
                 inputRef: ref,
                 classes: {
@@ -104,40 +137,11 @@ function getSuggestions(suggestions, value, { showEmpty = false } = {}) {
         });
 }
 
-const useStyles = makeStyles(theme => ( {
-    root: {
-        flexGrow: 1
-    },
-    container: {
-        flexGrow: 1,
-        position: "relative"
-    },
-    paper: {
-        position: "absolute",
-        zIndex: 1,
-        marginTop: theme.spacing(1),
-        left: 0,
-        right: 0
-    },
-    chip: {
-        margin: theme.spacing(0.5, 0.25)
-    },
-    inputRoot: {
-        flexWrap: "wrap"
-    },
-    inputInput: {
-        width: "auto",
-        flexGrow: 1
-    },
-    divider: {
-        height: theme.spacing(2)
-    }
-} ));
 
 function findGnome(name, props) {
     const gnomesInfo = Object.entries(props.dataSource);
     const gnomesNames = gnomesInfo.map(gnomeObj => {
-        return  gnomeObj[1];
+        return gnomeObj[1];
     });
     const index = gnomesNames.findIndex(info => info.name === name);
     props.onNewRequest(gnomesInfo[index][1]);

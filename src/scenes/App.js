@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import TextComplete from "../components/autocomplete/TextComplete"
-import {getString} from "resources";
+import "./App.css";
+import { getString } from "resources";
 import ProfileCard from "../components/profileCard/ProfileCard";
+import Header from "../components/header/Header";
 
 const App = () => {
 
@@ -59,25 +59,31 @@ const App = () => {
     };
 
     return (
-        <div>
-            <TextComplete
-                hintText={getString("search")}
-                dataSource={data}
-                maxSearchResults={4}
-                onNewRequest={gnome => onGnomeSelected(gnome)}
-            />
-            {isGnomeSelected ?
-                <ProfileCard
-                    profilePicture={selectedGnome.thumbnail}
-                    name={selectedGnome.name}
-                    age={selectedGnome.age}
-                    weight={selectedGnome.weight}
-                    height={selectedGnome.height}
-                    hair_color={selectedGnome.hair_color}
-                    professions={selectedGnome.professions}
-                    friends={selectedGnome.friends}
-                /> : "Nothing selected"}
-            {/*{data.length > 0 ? renderGnome(data) : "Sin datos"}*/}
+        <div className="container">
+            <div className="row">
+                <div className="col-12">
+                    <Header
+                        hintText={getString("search")}
+                        dataSource={data}
+                        maxSearchResults={4}
+                        onNewRequest={gnome => onGnomeSelected(gnome)}
+                    />
+                    <div className="col-12 d-flex justify-content-center align-items-center content-view">
+                        {isGnomeSelected ?
+                            <ProfileCard
+                                profilePicture={selectedGnome.thumbnail}
+                                name={selectedGnome.name}
+                                age={selectedGnome.age}
+                                weight={selectedGnome.weight}
+                                height={selectedGnome.height}
+                                hair_color={selectedGnome.hair_color}
+                                professions={selectedGnome.professions}
+                                friends={selectedGnome.friends}
+                            /> : "Nothing selected"}
+                        {/*{data.length > 0 ? renderGnome(data) : "no data"}*/}
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
