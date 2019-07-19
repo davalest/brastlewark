@@ -1,6 +1,6 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
-import TextComplete from "../searchBar/SearchBar";
+import SearchBar from "./SearchBar";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -8,20 +8,18 @@ const useStyles = makeStyles({
         position: "fixed",
         top: 20,
         left: 0,
-        zIndex: 999
+        right: 0,
+        zIndex: 999,
+        width:"86%"
     },
-    paperContainer: {
-        paddingTop: 20,
-        paddingBottom: 20
-    },
-    title:{
-        textAlign:"center",
-        color:"#1769aa"
+    title: {
+        textAlign: "center",
+        color: "#1769aa"
     }
 });
 
 
-const SearchBar = (props) => {
+const Header = (props) => {
     const classes = useStyles();
     return (
         <div className={`${classes.searchBar} container-fluid`}>
@@ -30,8 +28,7 @@ const SearchBar = (props) => {
                     <Paper elevation={3}
                            className={classes.paperContainer}
                     >
-                        <h1 className={classes.title}>Pro</h1>
-                        <TextComplete
+                        <SearchBar
                             hintText={props.hintText}
                             dataSource={props.dataSource}
                             maxSearchResults={4}
@@ -44,4 +41,4 @@ const SearchBar = (props) => {
     )
 };
 
-export default SearchBar;
+export default Header;

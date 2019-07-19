@@ -2,7 +2,7 @@ import { getPathArray, createCookie, getCookie } from "./utils";
 
 const strings = {
     es: {
-        "search": "Buscar",
+        "search": "Buscar un ciudadano",
         "name": "Nombre",
         "age": "Edad",
         "weight": "Peso",
@@ -14,7 +14,7 @@ const strings = {
 
     },
     en: {
-        "search": "Search",
+        "search": "Search for a citizen",
         "name": "Name",
         "age": "Age",
         "weight": "Weight",

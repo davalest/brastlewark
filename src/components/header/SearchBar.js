@@ -33,8 +33,6 @@ const useStyles = makeStyles(theme => ( {
     inputInput: {
         width: "auto",
         flexGrow: 1,
-        backgroundColor: "#f5f5f5",
-        textAlign: "center"
     },
     divider: {
         height: theme.spacing(2)
