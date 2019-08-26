@@ -10,6 +10,7 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can see it also in this URL: [https://davalest.github.io/brastlewark/](https://davalest.github.io/brastlewark/) to view it online.
 
 ### `npm test`
 
@@ -39,4 +40,3 @@ Launches the test runner in the interactive watch mode.
 ###Cookies 
 
 This app store a language cookie so it does not have to run a function to know the language. First look for the language in the cookie, if you do not find it, look for the language of the browser and if you do not find this language look for it in the language of the system
- 
